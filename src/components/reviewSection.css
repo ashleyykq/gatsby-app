@@ -57,7 +57,12 @@
     vertical-align: middle;
 }
 
-.testimonialBox .content .details h3 {
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right  {
+    background-image: none;
+}
+
+.testimonialBox .details h3 {
     padding-left: 8px;
     font-size: 16px;
     font-weight: 400;
@@ -66,13 +71,18 @@
      line-height: 1.1em;
 }
 
-.testimonialBox .content .details h3 span {
+.testimonialBox .details h3 span {
     font-size: 12px;
     color: grey;
     font-style: italic;
 }
 
-.swiper-container-3d .swiper-slide-shadow-left,
-.swiper-container-3d .swiper-slide-shadow-right  {
-    background-image: none;
+.testimonialBox .details{
+    position: absolute;
+    bottom: 36px;
+}
+
+.testimonialBox {
+    position: relative;
+    height: 100%;
 }
