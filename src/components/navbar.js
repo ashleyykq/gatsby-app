@@ -3,9 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
 
 const NavBar = () => (
-  <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  <Navbar collapseOnSelect expand="lg" style={{'backgroundColor':"#AC9C8B"}} variant="light">
     <Container>
-      <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+      <Navbar.Brand href="#home">MWP Wellness</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
