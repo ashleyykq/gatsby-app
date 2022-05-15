@@ -36,20 +36,16 @@ export default function LocationSection() {
   const [modalShow, setModalShow] = useState(false)
   const [modalIndex, setModalIndex] = useState(0)
 
-
   return (
     <SectionLayout>
       <div style={{ marginTop: "120px" }}>
         <Row xs={1} md={3} className="g-4">
           {Array.from(CardData).map((cardInfo, idx) => (
             <Col>
-              {/* <Card style={{ border: "none" }}> */}
               <Card key={idx}>
                 <StaticImage
                   src="../images/introSectionPhoto.jpg"
                   loading="eager"
-                  // width={1000}
-                  // height={1400}
                   quality={100}
                   formats={["auto", "webp", "avif"]}
                   alt=""
@@ -68,20 +64,20 @@ export default function LocationSection() {
                       padding: "8px 20px",
                       borderRadius: "32px",
                     }}
-                    onClick={() => setModalShow(true)}
+                    onClick={() => {
+                      setModalShow(true)
+                      setModalIndex(idx)
+                    }}
                   >
                     Find out more
                   </Button>
+                  <LocationModal
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                    modalindex={modalIndex}
+                  />
                 </Card.Body>
               </Card>
-              <LocationModal
-                show={modalShow}
-                onHide={() => setModalShow(false) && setModalIndex(idx)}
-                content={cardInfo.popUpContent}
-                modalIndex={modalIndex}
-                idx={idx}
-                CardData={CardData}
-              />
             </Col>
           ))}
         </Row>
