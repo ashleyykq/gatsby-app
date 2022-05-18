@@ -1,0 +1,21 @@
+.service-card-body {
+  padding: 0px;
+  border-color: "transparent";
+}
+
+.service-card {
+  border: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.service-card-title {
+  font-size: 24px !important;
+  line-height: 32px;
+  color: #504C4C;
+}
+
+.service-card-text {
+  font-size: 16px !important;
+  line-height: 24px;
+}
