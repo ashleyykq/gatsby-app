@@ -10,7 +10,7 @@ import { EffectCoverflow, Pagination } from "swiper"
 
 export default function reviewSection() {
   return (
-    <SectionLayout background={true}>
+    <SectionLayout landing={false}>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
