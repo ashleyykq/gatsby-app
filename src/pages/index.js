@@ -1,12 +1,12 @@
 import * as React from "react"
-import Seo from "../components/seo"
+import Seo from "../sections/seo"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Layout from "../components/layout"
-import LandingSection from "../components/landingSection"
-import ServicesSection from '../components/servicesSection'
-import AboutUsSection from '../components/aboutUsSection'
-import LocationSection from "../components/locationSection"
-import ReviewSection from "../components/reviewSection"
+import LandingSection from "../sections/landingSection"
+import ServicesSection from '../sections/servicesSection'
+import LocationSection from "../sections/locationSection"
+import ReviewSection from "../sections/reviewSection"
+import FeedbackSection from "../sections/feedbackSection"
 
 const IndexPage = () => (
   <>
@@ -14,9 +14,9 @@ const IndexPage = () => (
       <Seo title="Home" />
       <LandingSection />
       <ServicesSection />
-      {/* <AboutUsSection /> */}
       <LocationSection />
       <ReviewSection />
+      <FeedbackSection />
     </Layout>
   </>
 )

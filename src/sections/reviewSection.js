@@ -4,7 +4,7 @@ import "swiper/css"
 import "swiper/css/effect-coverflow"
 import "swiper/css/pagination"
 import { StaticImage } from "gatsby-plugin-image"
-import SectionLayout from "./sectionLayout"
+import SectionLayout from "../components/sectionLayout"
 import "./reviewSection.css"
 import { EffectCoverflow, Pagination } from "swiper"
 

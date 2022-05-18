@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Col, Row, CardGroup, Card } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
-import SectionLayout from "./sectionLayout"
+import SectionLayout from "../components/sectionLayout"
 
 const CardData = [
   {
@@ -21,23 +21,16 @@ const CardData = [
 ]
 const aboutUsSection = () => {
   return (
-    <SectionLayout background={true}>
-      <Card.Title style={{ textAlign: "center", paddingBottom: "16px" }}>
+    <SectionLayout landing={false}>
+      {/* <Card.Title style={{ textAlign: "center", paddingBottom: "16px" }}>
         About Us
-      </Card.Title>
+      </Card.Title> */}
       <Row xs={1} md={3} className="g-4">
         {Array.from(CardData).map((cardInfo, idx) => (
           <Col>
-            <Card
-              index={idx}
-              style={{
-                minHeight: `240px`,
-                textAlign: "center",
-                padding: `12px`,
-              }}
-            >
+            <Card index={idx} style={{ textAlign: "left", borderColor: 'transparent' }}>
               <Card.Body>
-                <Card.Title>{cardInfo.title}</Card.Title>
+                <Card.Title style={{ marginBottom: '16px' }}>{cardInfo.title}</Card.Title>
                 <Card.Text>{cardInfo.content}</Card.Text>
               </Card.Body>
             </Card>

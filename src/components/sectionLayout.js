@@ -1,23 +1,22 @@
 import * as React from "react"
-import PropTypes from "prop-types"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/css/bootstrap.min.css"
-import "./sectionLayout.css"
 
-const Layout = ({ children, background }) => {
+const Layout = ({ children, landing }) => {
   return (
     <>
-      {background ? (
+      {landing ? (
         <div
           style={{
-            backgroundColor: "#DAD2CB",
+            backgroundColor: "#0000",
+            height: "76vh",
           }}
         >
           <main
             style={{
               maxWidth: "1200px",
               margin: "0 auto",
-              padding: "48px 0px",
+              padding: "100px 0px 60px 0px",
             }}
           >
             {children}
@@ -26,14 +25,14 @@ const Layout = ({ children, background }) => {
       ) : (
         <div
           style={{
-            backgroundColor: "#0000",
+            backgroundColor: "#0000"
           }}
         >
           <main
             style={{
               maxWidth: "1200px",
               margin: "0 auto",
-              padding: "48px 0px",
+              padding: "40px 0px",
             }}
           >
             {children}

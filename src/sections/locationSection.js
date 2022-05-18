@@ -3,7 +3,7 @@ import SectionLayout from "../components/sectionLayout"
 import "./locationSection.css"
 import { StaticImage } from "gatsby-plugin-image"
 import { Card, Row, Col, Button } from "react-bootstrap"
-import LocationModal from "./locationModal"
+import LocationModal from "../components/locationModal"
 
 const CardData = [
   {
@@ -37,8 +37,8 @@ export default function LocationSection() {
   const [modalIndex, setModalIndex] = useState(0)
 
   return (
-    <SectionLayout>
-      <div style={{ marginTop: "120px" }}>
+    <SectionLayout landing={false}>
+      <div>
         <Row xs={1} md={3} className="g-4">
           {Array.from(CardData).map((cardInfo, idx) => (
             <Col>
