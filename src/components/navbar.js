@@ -1,15 +1,23 @@
 import * as React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { StaticImage } from "gatsby-plugin-image"
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
 
 const NavBar = () => (
-  <Navbar collapseOnSelect expand="lg" style={{'backgroundColor':"#AC9C8B"}} variant="light">
+  <Navbar collapseOnSelect expand="lg" style={{'backgroundColor':""}} variant="light">
     <Container>
-      <Navbar.Brand href="#home">MWP Wellness</Navbar.Brand>
+      <Navbar.Brand href="#home">            <StaticImage
+              src="../images/logo-removebg.png"
+              loading="eager"
+              height={64}
+              quality={100}
+              formats={["auto", "webp", "avif"]}
+              alt=""
+            /></Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="#features">Features</Nav.Link>
+          {/* <Nav.Link href="#features">Features</Nav.Link>
           <Nav.Link href="#pricing">Pricing</Nav.Link>
           <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -21,7 +29,7 @@ const NavBar = () => (
             <NavDropdown.Item href="#action/3.4">
               Separated link
             </NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
         </Nav>
         <Nav>
           <Nav.Link href="#deets">More deets</Nav.Link>
