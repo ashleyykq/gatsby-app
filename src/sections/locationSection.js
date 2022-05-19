@@ -59,7 +59,7 @@ export default function LocationSection() {
                   />
                 ) : idx === 1 ? (
                   <StaticImage
-                    src="../images/bedokOutlet/bedokPricing.png"
+                    src="../images/westCoastOutlet/westCoastStoreFront.png"
                     loading="eager"
                     quality={100}
                     formats={["auto", "webp", "avif"]}
@@ -68,7 +68,7 @@ export default function LocationSection() {
                   />
                 ) : (
                   <StaticImage
-                    src="../images/bedokOutlet/bedokBed.png"
+                    src="../images/sunsetwayOutlet/sunsetwayStoreFront.png"
                     loading="eager"
                     quality={100}
                     formats={["auto", "webp", "avif"]}
