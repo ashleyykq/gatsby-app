@@ -3,18 +3,9 @@ import { Col, Row, Button } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import SectionLayout from "../components/sectionLayout"
 import { StaticImage } from "gatsby-plugin-image"
-import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import "./landingSection.css"
-
-const settings = {
-  dots: false,
-  infinite: true,
-  fade: true,
-  autoplay: true,
-  speed: 6000,
-}
 
 const feedbackSection = () => {
   return (

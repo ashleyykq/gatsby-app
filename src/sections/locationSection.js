@@ -4,6 +4,8 @@ import "./locationSection.css"
 import { StaticImage } from "gatsby-plugin-image"
 import { Card, Row, Col, Button } from "react-bootstrap"
 import LocationModal from "../components/locationModal"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const CardData = [
   {
@@ -13,6 +15,7 @@ const CardData = [
     openingHours: "10AM to 1130PM",
     tele: "6702 0623",
     popUpContent: "test1",
+    images: "../images/bedokOutlet/bedokStoreFront.png",
   },
   {
     title: "West Coast",
@@ -21,6 +24,7 @@ const CardData = [
     openingHours: "10AM to 1130PM",
     tele: "6969 5153",
     popUpContent: "test2",
+    images: "../images/bedokOutlet/bedokStoreFront.png",
   },
   {
     title: "Sunset Way",
@@ -29,6 +33,7 @@ const CardData = [
     openingHours: "10AM to 1130PM",
     tele: "6962 7246",
     popUpContent: "test3",
+    images: "../images/bedokOutlet/bedokStoreFront.png",
   },
 ]
 
@@ -42,15 +47,36 @@ export default function LocationSection() {
         <Row xs={1} md={3} className="g-4">
           {Array.from(CardData).map((cardInfo, idx) => (
             <Col>
-              <Card key={idx}>
-                <StaticImage
-                  src="../images/introSectionPhoto.jpg"
-                  loading="eager"
-                  quality={100}
-                  formats={["auto", "webp", "avif"]}
-                  alt=""
-                  className="imgRadius"
-                />
+              <Card key={idx} className="location-card">
+                {idx === 0 ? (
+                  <StaticImage
+                    src="../images/bedokOutlet/bedokStoreFront.png"
+                    loading="eager"
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                    alt=""
+                    className="imgRadius"
+                  />
+                ) : idx === 1 ? (
+                  <StaticImage
+                    src="../images/bedokOutlet/bedokPricing.png"
+                    loading="eager"
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                    alt=""
+                    className="imgRadius"
+                  />
+                ) : (
+                  <StaticImage
+                    src="../images/bedokOutlet/bedokBed.png"
+                    loading="eager"
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                    alt=""
+                    className="imgRadius"
+                  />
+                )}
+
                 <Card.Body>
                   <Card.Title>{cardInfo.title}</Card.Title>
                   <Card.Text>{cardInfo.address}</Card.Text>
@@ -58,7 +84,22 @@ export default function LocationSection() {
                   <Card.Text>{cardInfo.openingHours}</Card.Text>
                   <Card.Text>{cardInfo.tele}</Card.Text>
                   <Button
-                    variant="outline-dark"
+                    className="button"
+                    style={{
+                      marginTop: "8px",
+                      padding: "8px 20px",
+                      borderRadius: "32px",
+                      marginRight: "8px",
+                    }}
+                    onClick={() => {
+                      setModalShow(true)
+                      setModalIndex(idx)
+                    }}
+                  >
+                    Book Now
+                  </Button>
+                  <Button
+                    className="button-outline"
                     style={{
                       marginTop: "8px",
                       padding: "8px 20px",
@@ -69,7 +110,7 @@ export default function LocationSection() {
                       setModalIndex(idx)
                     }}
                   >
-                    Find out more
+                    Find Out More
                   </Button>
                   <LocationModal
                     show={modalShow}

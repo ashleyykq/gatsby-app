@@ -32,7 +32,7 @@ export default function reviewSection() {
           <div className="testimonialBox">
             <StaticImage
               className="quote"
-              src="../images/right-quote.png"
+              src="../images/rightQuote.png"
               loading="eager"
               height={60}
               quality={100}
@@ -65,7 +65,7 @@ export default function reviewSection() {
           <div className="testimonialBox">
             <StaticImage
               className="quote"
-              src="../images/right-quote.png"
+              src="../images/rightQuote.png"
               loading="eager"
               height={60}
               quality={100}
@@ -95,7 +95,7 @@ export default function reviewSection() {
           <div className="testimonialBox">
             <StaticImage
               className="quote"
-              src="../images/right-quote.png"
+              src="../images/rightQuote.png"
               loading="eager"
               height={60}
               quality={100}
@@ -131,7 +131,7 @@ export default function reviewSection() {
           <div className="testimonialBox">
             <StaticImage
               className="quote"
-              src="../images/right-quote.png"
+              src="../images/rightQuote.png"
               loading="eager"
               height={60}
               quality={100}
@@ -164,7 +164,7 @@ export default function reviewSection() {
           <div className="testimonialBox">
             <StaticImage
               className="quote"
-              src="../images/right-quote.png"
+              src="../images/rightQuote.png"
               loading="eager"
               height={60}
               quality={100}
@@ -197,7 +197,7 @@ export default function reviewSection() {
           <div className="testimonialBox">
             <StaticImage
               className="quote"
-              src="../images/right-quote.png"
+              src="../images/rightQuote.png"
               loading="eager"
               height={60}
               quality={100}

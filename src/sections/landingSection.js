@@ -35,7 +35,7 @@ const introSection = () => {
         <Col style={{ maxWidth: "50%" }}>
           <Slider {...settings} className="overflow-hidden">
             <StaticImage
-              src="../images/photo2.png"
+              src="../images/landingPhoto1.png"
               loading="eager"
               height={1400}
               quality={100}
@@ -43,7 +43,7 @@ const introSection = () => {
               alt=""
             />
             <StaticImage
-              src="../images/photo3.png"
+              src="../images/landingPhoto2.png"
               loading="eager"
               height={1400}
               quality={100}
@@ -51,7 +51,7 @@ const introSection = () => {
               alt=""
             />
             <StaticImage
-              src="../images/photo4.png"
+              src="../images/landingPhoto3.png"
               loading="eager"
               height={1400}
               quality={100}

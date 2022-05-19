@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import SectionLayout from "../components/sectionLayout"
 import "./servicesSection.css"
 import { Card, Row, Col } from "react-bootstrap"

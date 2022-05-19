@@ -1,13 +1,13 @@
 import * as React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { StaticImage } from "gatsby-plugin-image"
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
+import { Navbar, Container, Nav } from 'react-bootstrap'
 
 const NavBar = () => (
   <Navbar collapseOnSelect expand="lg" style={{'backgroundColor':""}} variant="light">
     <Container>
       <Navbar.Brand href="#home">            <StaticImage
-              src="../images/logo-removebg.png"
+              src="../images/logo.png"
               loading="eager"
               height={64}
               quality={100}
