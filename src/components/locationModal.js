@@ -7,55 +7,128 @@ export default function LocationModal(props) {
   const locationData = [
     {
       title: "Bedok Reservoir",
-      address: "740 Bedok Reservoir Road #01-3183",
-      postalCode: "Singapore, 470740",
-      openingHours: "10AM to 1130PM",
-      tele: "6702 0623",
-      popUpContent: "test1",
     },
     {
       title: "West Coast",
-      address: "501 West Coast Drive #01-268",
-      postalCode: "Singapore, 120501",
-      openingHours: "10AM to 1130PM",
-      tele: "6969 5153",
-      popUpContent: "test2",
     },
     {
       title: "Sunset Way",
-      address: "105 Clementi Street 12",
-      postalCode: "Singapore, 120105",
-      openingHours: "10AM to 1130PM",
-      tele: "6962 7246",
-      popUpContent: "test3",
     },
   ]
   return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton></Modal.Header>
-      <Modal.Body>
-        <Modal.Title id="contained-modal-title-vcenter">
-          {locationData[props.modalindex].title}
-        </Modal.Title>
-        <LocationModalSlider />
-        Pricing
-        <StaticImage
-          src="../images/bedokOutlet/bedokPricing.png"
-          loading="eager"
-          height={360}
-          quality={100}
-          formats={["auto", "webp", "avif"]}
-          alt=""
-        />
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
-    </Modal>
+    <>
+      {props.modalindex === 0 ? (
+        <Modal
+          {...props}
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+        >
+          <Modal.Header closeButton></Modal.Header>
+          <Modal.Body>
+            <Modal.Title
+              id="contained-modal-title-vcenter"
+              style={{ textAlign: "center", paddingBottom: "8px" }}
+            >
+              {locationData[props.modalindex].title}
+            </Modal.Title>
+            <LocationModalSlider idx={props.modalindex} />
+            <Modal.Title
+              id="contained-modal-title-vcenter"
+              style={{ textAlign: "center", padding: "32px 0px 8px 0px" }}
+            >
+              Pricing
+            </Modal.Title>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <StaticImage
+                style={{ margin: "0 auto" }}
+                src="../images/bedokOutlet/bedokPricing2.png"
+                loading="eager"
+                quality={100}
+                formats={["auto", "webp", "avif"]}
+                alt=""
+              />
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={props.onHide}>Close</Button>
+          </Modal.Footer>
+        </Modal>
+      ) : props.modalindex === 1 ? (
+        <Modal
+          {...props}
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+        >
+          <Modal.Header closeButton></Modal.Header>
+          <Modal.Body>
+            <Modal.Title
+              id="contained-modal-title-vcenter"
+              style={{ textAlign: "center", paddingBottom: "8px" }}
+            >
+              {locationData[props.modalindex].title}
+            </Modal.Title>
+            <LocationModalSlider idx={props.modalindex} />
+            <Modal.Title
+              id="contained-modal-title-vcenter"
+              style={{ textAlign: "center", padding: "32px 0px 8px 0px" }}
+            >
+              Pricing
+            </Modal.Title>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <StaticImage
+                style={{ margin: "0 auto" }}
+                src="../images/sunsetwayOutlet/sunsetwayPricing.png"
+                loading="eager"
+                quality={100}
+                formats={["auto", "webp", "avif"]}
+                alt=""
+              />
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={props.onHide}>Close</Button>
+          </Modal.Footer>
+        </Modal>
+      ) : (
+        <Modal
+          {...props}
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+        >
+          <Modal.Header closeButton></Modal.Header>
+          <Modal.Body>
+            <Modal.Title
+              id="contained-modal-title-vcenter"
+              style={{ textAlign: "center", paddingBottom: "8px" }}
+            >
+              {locationData[props.modalindex].title}
+            </Modal.Title>
+            <LocationModalSlider idx={props.modalindex} />
+            <Modal.Title
+              id="contained-modal-title-vcenter"
+              style={{ textAlign: "center", padding: "32px 0px 8px 0px" }}
+            >
+              Pricing
+            </Modal.Title>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <StaticImage
+                style={{ margin: "0 auto" }}
+                src="../images/bedokOutlet/bedokPricing2.png"
+                loading="eager"
+                quality={100}
+                formats={["auto", "webp", "avif"]}
+                alt=""
+              />
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={props.onHide}>Close</Button>
+          </Modal.Footer>
+        </Modal>
+      )}
+    </>
   )
 }
