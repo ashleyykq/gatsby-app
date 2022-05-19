@@ -1,5 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 import { Modal, Button } from "react-bootstrap"
+import LocationModalSlider from "./LocationModalSlider"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function LocationModal(props) {
   const locationData = [
@@ -35,18 +37,21 @@ export default function LocationModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
+      <Modal.Header closeButton></Modal.Header>
       <Modal.Body>
-        <h4>{locationData[props.modalindex].title}</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+        <Modal.Title id="contained-modal-title-vcenter">
+          {locationData[props.modalindex].title}
+        </Modal.Title>
+        <LocationModalSlider />
+        Pricing
+        <StaticImage
+          src="../images/bedokOutlet/bedokPricing.png"
+          loading="eager"
+          height={360}
+          quality={100}
+          formats={["auto", "webp", "avif"]}
+          alt=""
+        />
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
