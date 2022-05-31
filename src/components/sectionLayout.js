@@ -16,7 +16,7 @@ const Layout = ({ children, landing }) => {
             style={{
               maxWidth: "1200px",
               margin: "0 auto",
-              padding: "100px 0px 60px 0px",
+              padding: "40px 0px 40px 0px",
             }}
           >
             {children}
@@ -25,14 +25,14 @@ const Layout = ({ children, landing }) => {
       ) : (
         <div
           style={{
-            backgroundColor: "#0000"
+            backgroundColor: "#0000",
           }}
         >
           <main
             style={{
               maxWidth: "1200px",
               margin: "0 auto",
-              padding: "40px 0px",
+              padding: "0px 0px 40px 0px",
             }}
           >
             {children}

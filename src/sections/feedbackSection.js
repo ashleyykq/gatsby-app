@@ -11,7 +11,11 @@ const feedbackSection = () => {
   return (
     <SectionLayout landing={false}>
       <Row>
-        <Col style={{ maxWidth: "50%" }}>
+        <Col
+          xs={12}
+          md={6}
+          className="d-flex align-items-center justify-content-center"
+        >
           <StaticImage
             src="../images/feedback.jpg"
             loading="eager"
@@ -21,18 +25,21 @@ const feedbackSection = () => {
             alt=""
           />
         </Col>
-        <Col style={{ paddingLeft: "40px" }}>
-          <span className="subheader">Name:</span>
+        <Col xs={12} md={6} className="vertical-col landing-section-row">
+          <div className="subheader">Name:</div>
           <br />
-          <span className="subheader">Phone Number:</span>
+          <div className="subheader">Phone Number:</div>
           <br />
-          <span className="subheader">Email:</span>
+          <div className="subheader">Email:</div>
           <br />
-          <span className="subheader">Feedback:</span>
+          <div className="subheader">Feedback:</div>
           <br />
-          <Button className="button">Send Feedback</Button>
+          {/* <Button className="button">Send Feedback</Button> */}
           <br />
-          <span className="subheader">Your Valuable feedback is important to us to increase our standard of service. Thank you!</span>
+          <div className="subheader">
+            Your Valuable feedback is important to us to increase our standard
+            of service. Thank you!
+          </div>
         </Col>
       </Row>
     </SectionLayout>

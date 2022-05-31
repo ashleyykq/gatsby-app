@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Col, Row, Button } from "react-bootstrap"
+import { Col, Row } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import SectionLayout from "../components/sectionLayout"
 import { StaticImage } from "gatsby-plugin-image"
@@ -7,6 +7,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import "./landingSection.css"
+import { Button } from "../components/Button"
 
 const settings = {
   dots: false,
@@ -20,7 +21,7 @@ const introSection = () => {
   return (
     <SectionLayout landing={true}>
       <Row>
-        <Col style={{ paddingRight: "40px" , paddingTop: "24px"}}>
+        <Col  style={{ paddingRight: "40px", paddingTop: "24px" }}>
           <p className="header">
             Massage is not just luxury but it is{" "}
             <span className="color-header">vital for good health</span>
@@ -30,7 +31,10 @@ const introSection = () => {
             stress level, lower blood pressure and relax
           </span>
           <br />
-          <Button className="button">Book a Slot</Button>
+          {/* <Button className="button">Book a Slot</Button> */}
+          <div>testing 1</div>
+          <Button buttonSize="btn--medium" buttonStyle='btn--primary' buttonColor="primary">testing testing</Button>
+          <div>testing 2</div>
         </Col>
         <Col style={{ maxWidth: "50%" }}>
           <Slider {...settings} className="overflow-hidden">

@@ -35,3 +35,21 @@ body {
     border-color: #AC9C8B;
     color: #AC9C8B;
 }
+
+.vertical-col {
+    margin: auto 0px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .landing-section-row {
+        padding: 0px 40px;
+  }
+    .element.style {
+        padding: 0px;
+    }
+}  
+  /* @media screen and (max-width: 767px) {
+
+  }
+   */
