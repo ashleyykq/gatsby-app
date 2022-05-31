@@ -29,7 +29,7 @@ export default function LocationSection() {
         <Row xs={1} md={4} className="g-4">
           {Array.from(CardData).map((cardInfo, idx) => (
             <Col>
-              <Card key={idx} className='service-card'>
+              <Card key={idx} className='service-card service-section-row'>
                 <Card.Body className='service-card-body'>
                   <Card.Title className='service-card-title'>{cardInfo.title}</Card.Title>
                   <Card.Text className='service-card-text'>{cardInfo.subtitle}</Card.Text>

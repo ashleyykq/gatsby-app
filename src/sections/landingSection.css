@@ -4,52 +4,102 @@ body {
   font-family: "Noticia Text", serif;
 }
 
+.section-layout {
+  height: 76vh;
+}
+
 .header {
-    font-size: 48px;
-    font-weight: 600;
-    color: #504C4C;
-    line-height: 64px;
+  font-size: 48px;
+  font-weight: 600;
+  color: #504c4c;
+  line-height: 64px;
 }
 
 .color-header {
-    font-size: 48px;
-    font-weight: 600;
-    color: #AC9C8B;
+  font-size: 48px;
+  font-weight: 600;
+  color: #ac9c8b;
 }
 
 .subheader {
-    font-size: 16px;
-    color: #504C4C;
+  font-size: 16px;
+  color: #504c4c;
 }
 
 .button {
-    background-color: #AC9C8B;
-    padding: 8px 32px;
-    border-radius: 40px;
-    margin-top: 32px;
-    border-color: #AC9C8B;
+  background-color: #ac9c8b;
+  padding: 8px 32px;
+  border-radius: 40px;
+  margin-top: 32px;
+  border-color: #ac9c8b;
 }
 
 .btn-primary:hover {
-    background-color: white;
-    border-color: #AC9C8B;
-    color: #AC9C8B;
+  background-color: white;
+  border-color: #ac9c8b;
+  color: #ac9c8b;
 }
 
 .vertical-col {
-    margin: auto 0px;
+  margin: auto 0px;
 }
 
+.landing-col-slider {
+  max-width: 50%;
+}
 
-@media screen and (max-width: 1024px) {
-    .landing-section-row {
-        padding: 0px 40px;
-  }
-    .element.style {
-        padding: 0px;
-    }
-}  
-  /* @media screen and (max-width: 767px) {
+.layout-padding-top {
+  padding: 120px 0px 0px 0px;
+}
 
+/* .vertical-center-layout {
+    position: absolute;
+    top: 50%;
+    transform:translate(50%, -50%);
+    -webkit-transform:translate(20%, -50%);
+} */
+
+@media screen and (max-width: 767px) {
+  .section-layout {
+    height: unset;
   }
-   */
+  .landing-section-row {
+    padding: 0px 16px;
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+  .feedback-section-row {
+    padding: 0px 40px;
+  }
+
+  .landing-col-slider {
+    max-width: 100%;
+  }
+
+  .layout-padding-top {
+    padding: 16px 0px 0px 0px;
+  }
+
+  .header {
+    padding-top: 24px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #504c4c;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .color-header {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ac9c8b;
+  }
+
+  .landing-subheader {
+    font-size: 16px;
+    color: #504c4c;
+    text-align: center;
+    padding-bottom: 24px;
+  }
+}

@@ -19,24 +19,24 @@ const settings = {
 
 const introSection = () => {
   return (
-    <SectionLayout landing={true}>
-      <Row>
-        <Col  style={{ paddingRight: "40px", paddingTop: "24px" }}>
+    <SectionLayout landing={true} style={{backgroundColor: ''}}>
+      <Row className="landing-section-row" style={{backgroundColor: ''}}>
+        <Col className="vertical-col" style={{backgroundColor: ''}}>
           <p className="header">
             Massage is not just luxury but it is{" "}
             <span className="color-header">vital for good health</span>
           </p>
-          <span className="subheader">
+          <p className="subheader landing-subheader">
             Book an appointment with us now and allow massage to reduce your
             stress level, lower blood pressure and relax
-          </span>
+          </p>
           <br />
           {/* <Button className="button">Book a Slot</Button> */}
-          <div>testing 1</div>
+          {/* <div>testing 1</div>
           <Button buttonSize="btn--medium" buttonStyle='btn--primary' buttonColor="primary">testing testing</Button>
-          <div>testing 2</div>
+          <div>testing 2</div> */}
         </Col>
-        <Col style={{ maxWidth: "50%" }}>
+        <Col className='landing-col-slider' style={{backgroundColor: ''}}>
           <Slider {...settings} className="overflow-hidden">
             <StaticImage
               src="../images/landingPhoto1.png"

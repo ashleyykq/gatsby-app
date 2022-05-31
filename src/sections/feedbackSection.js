@@ -25,7 +25,7 @@ const feedbackSection = () => {
             alt=""
           />
         </Col>
-        <Col xs={12} md={6} className="vertical-col landing-section-row">
+        <Col xs={12} md={6} className="vertical-col feedback-section-row">
           <div className="subheader">Name:</div>
           <br />
           <div className="subheader">Phone Number:</div>

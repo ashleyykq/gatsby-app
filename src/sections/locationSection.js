@@ -43,7 +43,7 @@ export default function LocationSection() {
 
   return (
     <SectionLayout landing={false}>
-      <div>
+      <div className="location-section-row">
         <Row xs={1} md={3} className="g-4">
           {Array.from(CardData).map((cardInfo, idx) => (
             <Col>

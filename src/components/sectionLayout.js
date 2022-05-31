@@ -7,20 +7,17 @@ const Layout = ({ children, landing }) => {
     <>
       {landing ? (
         <div
-          style={{
-            backgroundColor: "#0000",
-            height: "76vh",
-          }}
+            className= "section-layout"
         >
-          <main
+          <div
             style={{
               maxWidth: "1200px",
-              margin: "0 auto",
-              padding: "40px 0px 40px 0px",
+              margin: "auto",
             }}
+            className='layout-padding-top'
           >
             {children}
-          </main>
+          </div>
         </div>
       ) : (
         <div

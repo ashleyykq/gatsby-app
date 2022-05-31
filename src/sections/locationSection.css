@@ -29,4 +29,8 @@
     color: white;
 }
 
-
+@media screen and (max-width: 1024px) {
+    .location-section-row {
+        padding: 0px 16px;
+  }
+} 
